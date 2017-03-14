@@ -39,7 +39,7 @@ def standardize_data(dataset, means, stdevs):
 			row[i] = (row[i] - means[i]) / stdevs[i]
 #writing the normalized data into a new csv file
 def write_csv(dataset):
-	with open('pima-indians-diabetes-normalized.csv','w') as f:
+	with open('pima-indians-diabetes-standardized.csv','w') as f:
 		for row in dataset:
 			for item in row:
 				f.write(str(item) + ',')
